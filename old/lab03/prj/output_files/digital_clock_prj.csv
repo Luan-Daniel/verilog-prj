@@ -1,0 +1,28 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# File: C:\Users\luand\OneDrive\f\ufsc\20231\ldh\lab03\prj\output_files\digital_clock_prj.csv
+# Generated on: Tue Apr 04 19:22:33 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair
+clk_i,Input,PIN_G21,6,B6_N1,PIN_G21,,,,,
+k_i,Input,PIN_J6,1,B1_N0,PIN_A8,,,,,
+ns_i,Input,PIN_H6,1,B1_N0,PIN_B9,,,,,
+p_i,Input,PIN_G4,1,B1_N0,PIN_G11,,,,,
+rst_i,Input,PIN_G5,1,B1_N0,PIN_C10,,,,,
+t_i,Input,PIN_J7,1,B1_N1,PIN_C15,,,,,
+w_o,Output,PIN_J1,1,B1_N1,PIN_B8,,,,,

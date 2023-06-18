@@ -1,0 +1,20 @@
+`timescale 10us/100ns
+
+module mux2x1_tb;
+
+reg r_A;
+reg r_B;
+reg r_SEL;
+
+wire w_OUT;
+
+integer TIME_COUNT = 0;
+
+mux2x1 DUT
+(
+  .a  (r_A),
+  .b  (r_B),
+  .sel(r_SEL),
+
+  .op (w_OUT)
+)

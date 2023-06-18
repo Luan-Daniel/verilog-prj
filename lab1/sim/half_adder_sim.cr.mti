@@ -1,0 +1,15 @@
+C:/Users/luand/f/ufsc/20231/ldh/lab1/src/half_adder_tb.v {1 {vlog -work work C:/Users/luand/f/ufsc/20231/ldh/lab1/src/half_adder_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module half_adder_tb
+
+Top level modules:
+	half_adder_tb
+
+} {} {}} C:/Users/luand/f/ufsc/20231/ldh/lab1/src/half_adder.v {1 {vlog -work work C:/Users/luand/f/ufsc/20231/ldh/lab1/src/half_adder.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module half_adder
+
+Top level modules:
+	half_adder
+
+} {} {}}

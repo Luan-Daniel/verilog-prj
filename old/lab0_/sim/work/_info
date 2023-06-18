@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1
+vmux2x1
+Z1 IdHG5JbecSg^FKl6oKT_Mi3
+Z2 V[<^CRH<7FzoXK2aQ`Cn7U1
+Z3 dC:\Users\luand\f\ufsc\20231\ldh\lab0_\sim
+Z4 w1679436841
+Z5 8C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1.v
+Z6 FC:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1.v
+L0 6
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 M9`^8J00D^b2iEJ^MIiDd2
+!s85 0
+Z10 !s108 1679439265.268000
+Z11 !s107 C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1.v|
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1.v|
+!s101 -O0
+vmux2x1_tb
+!i10b 1
+!s100 SUV^>Zio7U8kHX>C>UF`O0
+IgMo@An^kmodX3Xioz7VJ61
+VM=G=@VgX`>XDOMP?C?L=A0
+R3
+w1679439086
+8C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1_tb.v
+FC:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1_tb.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1679439265.809000
+!s107 C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/luand/f/ufsc/20231/ldh/lab0_/src/mux2x1_tb.v|
+!s101 -O0
+R8

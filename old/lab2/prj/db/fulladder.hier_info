@@ -1,0 +1,26 @@
+|fulladder
+a_i => a_i.IN1
+b_i => b_i.IN1
+cin_i => cin_i.IN1
+sum_o <= half_adder:u2.s_i
+car_o <= car_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder|half_adder:u1
+a_i => s_i.IN0
+a_i => c_i.IN0
+b_i => s_i.IN1
+b_i => c_i.IN1
+s_i <= s_i.DB_MAX_OUTPUT_PORT_TYPE
+c_i <= c_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder|half_adder:u2
+a_i => s_i.IN0
+a_i => c_i.IN0
+b_i => s_i.IN1
+b_i => c_i.IN1
+s_i <= s_i.DB_MAX_OUTPUT_PORT_TYPE
+c_i <= c_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
