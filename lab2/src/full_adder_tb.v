@@ -6,10 +6,6 @@
  * @see full_adder
  */
 
-`ifdef __ICARUS__
-  `include "lab2/src/full_adder.v"
-`endif
-
 module full_adder_tb;
 
   reg reg_a, reg_b, reg_i;
