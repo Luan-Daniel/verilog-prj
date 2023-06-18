@@ -1,0 +1,63 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\luand\f\ufsc\20231\ldh\lab01\sim
+vfulladder
+!i10b 1
+!s100 WWhX_NZJ11f9@e<O1R9[82
+IlBG@E3S1;2VTX>?`OkzoI3
+Z1 VaAA0=GilMETEnJ6S[Emz93
+Z2 dC:\Users\luand\f\ufsc\20231\ldh\lab2\sim
+Z3 w1680043721
+Z4 8C:/Users/luand/f/ufsc/20231/ldh/lab2/prj/fulladder.v
+Z5 FC:/Users/luand/f/ufsc/20231/ldh/lab2/prj/fulladder.v
+L0 3
+Z6 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z7 !s108 1680043753.986000
+Z8 !s107 ..\..\lab01\src\half_adder.v|C:/Users/luand/f/ufsc/20231/ldh/lab2/prj/fulladder.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/luand/f/ufsc/20231/ldh/lab2/prj/fulladder.v|
+!s101 -O0
+Z10 o-work work -O0
+vfulladder_tb
+Z11 Ifa33Xoa^Rid5JA^Wf8IVO1
+Z12 VFS2a9UPbHaB1icTb3Vi9<2
+R2
+Z13 w1680043734
+Z14 8C:/Users/luand/f/ufsc/20231/ldh/lab2/src/fulladder_tb.v
+Z15 FC:/Users/luand/f/ufsc/20231/ldh/lab2/src/fulladder_tb.v
+L0 4
+R6
+r1
+31
+Z16 !s108 1680043744.234000
+Z17 !s107 ..\..\lab01\src\half_adder.v|..\prj\fulladder.v|C:/Users/luand/f/ufsc/20231/ldh/lab2/src/fulladder_tb.v|
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/luand/f/ufsc/20231/ldh/lab2/src/fulladder_tb.v|
+R10
+!i10b 1
+Z19 !s100 5<:EQehJ3@`3Eodf[Q6WR0
+!s85 0
+!s101 -O0
+vhalf_adder
+!i10b 1
+Z20 !s100 4VBF;2Ph5^Cf4@@XWahz;1
+Z21 I[iPKniDDIUQa2]WCLih7a2
+Z22 VKiK0HbJN82^=_3f2hLVM30
+R2
+R3
+Z23 F..\..\lab01\src\half_adder.v
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+R10
