@@ -1,2 +1,12 @@
+# icarus build directory
 build
+
+# DE0 documentation directory
 DE0
+
+# icarus build files
+*.vvp
+*.out
+
+# waveform files
+*.vcd

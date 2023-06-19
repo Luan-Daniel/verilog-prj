@@ -27,6 +27,7 @@ module mux2x1_tb;
 		#5;
 		s_tb = 1'b1;
 		#5;
+		$finish;
 	end
 
 	always @(a_tb or b_tb or s_tb) begin
