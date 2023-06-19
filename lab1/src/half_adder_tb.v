@@ -35,7 +35,7 @@ module half_adder_tb;
 		reg_a = 1'b1;
 		reg_b = 1'b1;
 		#5; TIME_COUNT = TIME_COUNT+5;
-		$stop;
+		$finish;
 	end
 
 	always @(reg_a or reg_b) begin
