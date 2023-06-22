@@ -2,7 +2,7 @@
  * lab0 - multiplexador 2x1
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- ** src\mux2x1_tb.v **
+ ** lab0\src\mux2x1_tb.v **
  * Testes para multiplexador 2x1
  * @see mux2x1
  */

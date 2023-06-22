@@ -2,7 +2,7 @@
  * lab2 - Full Adder
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- ** src\full_adder.v **
+ ** lab2\src\full_adder.v **
  * Define um modulo para um somador de 1-bit
  */
 

@@ -2,7 +2,7 @@
  * lab1 - Meio somador de 1 bit
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- ** src\half_adder.v **
+ ** lab1\src\half_adder.v **
  * Define um modulo para um meio somador de 1-bit
  */
 

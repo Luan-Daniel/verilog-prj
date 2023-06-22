@@ -2,7 +2,7 @@
  * lab0 - multiplexador 2x1
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- ** src\mux2x1.v **
+ ** lab0\src\mux2x1.v **
  * Define um modulo para um multiplexador 2x1
  */
 

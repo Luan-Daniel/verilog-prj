@@ -1,8 +1,8 @@
 /**
- * lab2
+ * lab2 - Teste para full_adder
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- * src\full_adder_tb.v *
+ ** lab2\src\full_adder_tb.v **
  * @see full_adder
  */
 

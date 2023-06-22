@@ -2,7 +2,7 @@
  * lab1 - Meio somador de 1 bit
  * Aluno: Luan Daniel de Oliveira Melo (20102096)
  *
- ** src\half_adder_tb.v **
+ ** lab1\src\half_adder_tb.v **
  * Testes para meio somador
  * @see half_adder
  */
