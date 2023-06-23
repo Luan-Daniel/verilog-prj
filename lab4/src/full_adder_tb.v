@@ -7,7 +7,7 @@
  */
 
 module full_adder_tb
-#(parameter N = 3);
+#(parameter N = 4);
 
   reg [N-1:0] reg_a, reg_b;
   reg reg_i;
