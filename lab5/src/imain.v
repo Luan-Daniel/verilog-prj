@@ -2,25 +2,21 @@
 
 // modules
 `include "lab5/src/mux.v"
+`include "lab4/src/half_adder.v"
+`include "lab4/src/full_adder.v"
+`include "lab5/src/arithmetic_module.v"
+`include "lab5/src/logic_module.v"
+`include "lab5/src/flag_circuit.v"
+`include "lab5/src/alu.v"
 
 // testbenchs
 `include "lab5/src/mux_tb.v"
+`include "lab5/src/arithmetic_module_tb.v"
+`include "lab5/src/logic_module_tb.v"
+`include "lab5/src/alu_tb.v"
+`include "lab5/src/flag_circuit_tb.v"
 
-module top_mux_tb; // teste varias instancias do mux, cada um com parametros diferentes.
-
-  parameter MAX_BUS_SIZE = 6;
-  parameter MAX_SEL_SIZE = 4;
-  generate
-    genvar b, m;
-    for (m=1; m<=MAX_SEL_SIZE; m=m+1) begin
-      for (b=1; b<=MAX_BUS_SIZE; b=b+1) begin
-        mux_tb #(
-          .BUS_SIZE(b),
-          .SEL_SIZE(m),
-          .ID((b-1)*MAX_SEL_SIZE+m)) MUX_TB();
-      end
-    end
-  endgenerate
-endmodule
+// gerate testbenchs
+//`include "lab5/src/mux_gtb.v"
 
 `endif //__ICARUS__

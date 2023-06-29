@@ -1,28 +1,29 @@
 module mux_tb
-#(parameter BUS_SIZE = 4, SEL_SIZE = 2, ID = 0);
-  reg [(2**SEL_SIZE)-1:0][BUS_SIZE-1:0] buses;
-  reg [SEL_SIZE-1:0] select;
-  wire [BUS_SIZE-1:0] result;
+#(parameter N = 4, S = 2, ID = 0);
+  localparam MASK = (1<<N)-1;
 
-  mux #(
-  .BUS_SIZE(BUS_SIZE),
-  .SEL_SIZE(SEL_SIZE))
-    MUX_1(
+  reg [(2**S)-1:0][N-1:0] buses;
+  reg [S-1:0] select;
+  wire [N-1:0] result;
+
+  mux #(.N(N),.S(S)) MUX_1(
     .buses(buses),
     .select(select),
     .result(result)
   );
 
   initial begin
-    for (integer i = 0; i < (2**SEL_SIZE); i = i + 1) begin
+    `define expect_eq(expd_const, var, mask) if ((var&mask)!=(expd_const&mask)) $display("[!] Fail: expected %s==%-b; actually %-b;\n %s", `"var`", (expd_const&mask), (var&mask), `__FILE__); else $display("[OK] Success");
+
+    // give each wire a unique value
+    for (integer i = 0; i < (2**S); i = i + 1) begin
       buses[i] = i;
     end
 
-    for (integer i = 0; i < (2**SEL_SIZE); i = i + 1) begin
-      select = i;
-      #5;
-      $display(">%d| select=%d; expected_result=%d; result=%d;", ID, select, buses[i], result);
-      if (result !== buses[i]) $display("!%d| [Test failed for select=%d]", ID, select);
+    // tests and display results
+    for (integer i = 0; i < (2**S); i = i + 1) begin
+      select = i; #5;
+      `expect_eq(buses[i], result, MASK);
     end
   end
 endmodule
