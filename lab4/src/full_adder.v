@@ -19,14 +19,14 @@ module full_adder
 
 	assign i1 = 0 + i;
 
-	half_adder #(N) U1(
+	half_adder #(.N(N)) U1(
 		.a(a),
 		.b(b),
 		.s(s1),
 		.c(c1)
 	);
 
-	half_adder #(N) U2(
+	half_adder #(.N(N)) U2(
 		.a(s1),
 		.b(i1),
 		.s(s),
