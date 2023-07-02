@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Thu Jun 29 19:11:20 2023
+Sun Jul 02 18:49:30 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,22 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |alu
+ 11. Parameter Settings for User Entity Instance: logic_module:MOD_1
+ 12. Parameter Settings for User Entity Instance: logic_module:MOD_1|mux4:L_MUX
+ 13. Parameter Settings for User Entity Instance: arithmetic_module:MOD_0
+ 14. Parameter Settings for User Entity Instance: arithmetic_module:MOD_0|mux4:B_MUX
+ 15. Parameter Settings for User Entity Instance: arithmetic_module:MOD_0|adder:ADDER
+ 16. Parameter Settings for User Entity Instance: mux2:MUX_0
+ 17. Parameter Settings for User Entity Instance: flag_circuit:FC_0
+ 18. Port Connectivity Checks: "arithmetic_module:MOD_0|mux4:B_MUX"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +51,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Jun 29 19:11:20 2023          ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 02 18:49:30 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; alu                                        ;
 ; Top-level Entity Name              ; alu                                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 103                                        ;
+;     Total combinational functions  ; 103                                        ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 56                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -151,23 +166,244 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; ../src/half_adder.v              ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/half_adder.v        ;         ;
+; ../src/full_adder.v              ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/full_adder.v        ;         ;
+; ../src/adder.v                   ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/adder.v             ;         ;
+; ../src/mux4.v                    ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/mux4.v              ;         ;
+; ../src/mux2.v                    ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/mux2.v              ;         ;
+; ../src/logic_module.v            ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/logic_module.v      ;         ;
+; ../src/flag_circuit.v            ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/flag_circuit.v      ;         ;
+; ../src/arithmetic_module.v       ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/arithmetic_module.v ;         ;
+; ../src/alu.v                     ; yes             ; User Verilog HDL File  ; C:/Users/luand/f/ufsc/20231/ldh/lab5/src/alu.v               ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 103             ;
+;                                             ;                 ;
+; Total combinational functions               ; 103             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 25              ;
+;     -- 3 input functions                    ; 76              ;
+;     -- <=2 input functions                  ; 2               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 88              ;
+;     -- arithmetic mode                      ; 15              ;
+;                                             ;                 ;
+; Total registers                             ; 0               ;
+;     -- Dedicated logic registers            ; 0               ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 56              ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+; Maximum fan-out node                        ; select[0]~input ;
+; Maximum fan-out                             ; 49              ;
+; Total fan-out                               ; 408             ;
+; Average fan-out                             ; 1.90            ;
++---------------------------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; |alu                                   ; 103 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |alu                                                                                 ; work         ;
+;    |arithmetic_module:MOD_0|           ; 65 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0                                                         ; work         ;
+;       |adder:ADDER|                    ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER                                             ; work         ;
+;          |full_adder:gen_adder[0].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[0].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[0].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[10].FA| ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[10].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[10].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[11].FA| ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[11].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[11].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[12].FA| ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[12].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[12].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[13].FA| ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[13].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[13].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[14].FA| ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[14].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[14].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[15].FA| ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[15].FA                 ; work         ;
+;             |half_adder:HA_1|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[15].FA|half_adder:HA_1 ; work         ;
+;          |full_adder:gen_adder[1].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[1].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[1].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[2].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[2].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[2].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[3].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[3].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[3].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[4].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[4].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[4].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[5].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[5].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[5].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[6].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[6].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[6].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[7].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[7].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[7].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[8].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[8].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[8].FA|half_adder:HA_1  ; work         ;
+;          |full_adder:gen_adder[9].FA|  ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[9].FA                  ; work         ;
+;             |half_adder:HA_1|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[9].FA|half_adder:HA_1  ; work         ;
+;       |mux4:B_MUX|                     ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|arithmetic_module:MOD_0|mux4:B_MUX                                              ; work         ;
+;    |flag_circuit:FC_0|                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|flag_circuit:FC_0                                                               ; work         ;
+;    |mux2:MUX_0|                        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |alu|mux2:MUX_0                                                                      ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |alu|arithmetic_module:MOD_0|mux4:B_MUX|result[1] ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |alu|mux2:MUX_0|result[0]                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |alu ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logic_module:MOD_1 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; N              ; 16    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logic_module:MOD_1|mux4:L_MUX ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 16    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arithmetic_module:MOD_0 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 16    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arithmetic_module:MOD_0|mux4:B_MUX ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arithmetic_module:MOD_0|adder:ADDER ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:MUX_0 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; N              ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flag_circuit:FC_0 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 16    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "arithmetic_module:MOD_0|mux4:B_MUX" ;
++--------------+-------+----------+------------------------------+
+; Port         ; Type  ; Severity ; Details                      ;
++--------------+-------+----------+------------------------------+
+; in_10[15..1] ; Input ; Info     ; Stuck at GND                 ;
+; in_10[0]     ; Input ; Info     ; Stuck at VCC                 ;
+; in_11        ; Input ; Info     ; Stuck at VCC                 ;
++--------------+-------+----------+------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Jun 29 19:11:19 2023
+    Info: Processing started: Sun Jul 02 18:49:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu_prj -c alu
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/half_adder.v
+    Info (12023): Found entity 1: half_adder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/full_adder.v
+    Info (12023): Found entity 1: full_adder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/adder.v
+    Info (12023): Found entity 1: adder
 Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/mux4.v
     Info (12023): Found entity 1: mux4
 Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/mux2.v
     Info (12023): Found entity 1: mux2
-Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab4/src/half_adder.v
-    Info (12023): Found entity 1: half_adder
-Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab4/src/full_adder.v
-    Info (12023): Found entity 1: full_adder
 Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/logic_module.v
     Info (12023): Found entity 1: logic_module
 Info (12021): Found 1 design units, including 1 entities, in source file /users/luand/f/ufsc/20231/ldh/lab5/src/flag_circuit.v
@@ -180,14 +416,23 @@ Info (12127): Elaborating entity "alu" for the top level hierarchy
 Info (12128): Elaborating entity "logic_module" for hierarchy "logic_module:MOD_1"
 Info (12128): Elaborating entity "mux4" for hierarchy "logic_module:MOD_1|mux4:L_MUX"
 Info (12128): Elaborating entity "arithmetic_module" for hierarchy "arithmetic_module:MOD_0"
-Warning (10230): Verilog HDL assignment warning at arithmetic_module.v(13): truncated value with size 32 to match size of target (4)
-Info (12128): Elaborating entity "full_adder" for hierarchy "arithmetic_module:MOD_0|full_adder:ADDER"
-Error (10207): Verilog HDL error at full_adder.v(23): can't resolve reference to object "c" File: C:/Users/luand/f/ufsc/20231/ldh/lab4/src/full_adder.v Line: 23
-Error (12152): Can't elaborate user hierarchy "arithmetic_module:MOD_0|full_adder:ADDER" File: C:/Users/luand/f/ufsc/20231/ldh/lab5/src/arithmetic_module.v Line: 29
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4596 megabytes
-    Error: Processing ended: Thu Jun 29 19:11:20 2023
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Warning (10230): Verilog HDL assignment warning at arithmetic_module.v(13): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "adder" for hierarchy "arithmetic_module:MOD_0|adder:ADDER"
+Info (12128): Elaborating entity "full_adder" for hierarchy "arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[0].FA"
+Info (12128): Elaborating entity "half_adder" for hierarchy "arithmetic_module:MOD_0|adder:ADDER|full_adder:gen_adder[0].FA|half_adder:HA_0"
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:MUX_0"
+Info (12128): Elaborating entity "flag_circuit" for hierarchy "flag_circuit:FC_0"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 103 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4618 megabytes
+    Info: Processing ended: Sun Jul 02 18:49:30 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

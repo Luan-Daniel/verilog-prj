@@ -8,12 +8,12 @@ module flag_circuit_tb
   wire [MSB:0] s;
   wire c, n_flag, c_flag, v_flag, z_flag;
 
-  full_adder #(.N(N)) ADD_0(
+  adder #(.N(N)) ADD_0(
     .a(a),
     .b(b),
-    .i(i),
-    .s(s),
-    .c(c)
+    .c_in(i),
+    .sum(s),
+    .c_out(c)
   );
 
   flag_circuit #(.N(N)) FC_0 (

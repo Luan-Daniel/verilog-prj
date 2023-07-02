@@ -1,5 +1,5 @@
 module alu
-#(parameter N = 4)
+#(parameter N = 16)
 (a, b, carry_in, select, result, n_flag, c_flag, v_flag, z_flag);
   localparam MSB = (N-1);
   localparam LSB = (0);

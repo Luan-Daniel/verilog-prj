@@ -22,9 +22,9 @@ module arithmetic_module
     .result(b_res)
   );
 
-  full_adder #(.N(N)) ADDER(
+  adder #(.N(N)) ADDER(
     .a(a), .b(b_res),
-    .i(carry_in),
-    .c(carry_out), .s(result)
+    .c_in(carry_in),
+    .c_out(carry_out), .sum(result)
   );
 endmodule
