@@ -37,11 +37,9 @@ module alu
   // sel || result
   // 1XX => logic_result
   // 0XX => arithmetic_result
-  mux #(.N(N), .S(1)) MUX_0(
-    .buses({
-      logic_result,
-      arithmetic_result
-    }),
+  mux2 #(.N(N)) MUX_0(
+    .in_0(arithmetic_result),
+    .in_1(logic_result),
     .select(select[2]),
     .result(result)
   );

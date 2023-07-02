@@ -17,8 +17,11 @@ module logic_module
   assign xor_res = a^b;
   assign comp_res = ~a;
 
-  mux #(.N(N), .S(2)) L_MUX(
-    .buses({comp_res, xor_res, or_res, and_res}),
+  mux4 #(.N(N)) L_MUX(
+    .in_00(and_res),
+    .in_01(or_res),
+    .in_10(xor_res),
+    .in_11(comp_res),
     .select(select),
     .result(result)
   );

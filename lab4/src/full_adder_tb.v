@@ -23,7 +23,7 @@ module full_adder_tb
     .s(wire_s),
     .c(wire_c)
   );
-  
+
   initial begin
     TIME_COUNT = 0;
     $display("i+a+b   | c sum | time");

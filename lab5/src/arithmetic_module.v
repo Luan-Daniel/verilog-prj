@@ -13,8 +13,11 @@ module arithmetic_module
   wire [MSB:LSB] inc = 1, dec = -1;
   wire [MSB:LSB] b_res;
 
-  mux #(.N(N), .S(2)) B_MUX(
-    .buses({dec, inc, -b, b}),
+  mux4 #(.N(N)) B_MUX(
+    .in_00(b),
+    .in_01(-b),
+    .in_10(inc),
+    .in_11(dec),
     .select(select),
     .result(b_res)
   );

@@ -1,0 +1,222 @@
+|alu
+a[0] => a[0].IN3
+a[1] => a[1].IN3
+a[2] => a[2].IN3
+a[3] => a[3].IN3
+b[0] => b[0].IN3
+b[1] => b[1].IN3
+b[2] => b[2].IN3
+b[3] => b[3].IN3
+carry_in => carry_in.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+result[0] << mux2:MUX_0.result
+result[1] << mux2:MUX_0.result
+result[2] << mux2:MUX_0.result
+result[3] << mux2:MUX_0.result
+n_flag << flag_circuit:FC_0.n_flag
+c_flag << flag_circuit:FC_0.c_flag
+v_flag << flag_circuit:FC_0.v_flag
+z_flag << flag_circuit:FC_0.z_flag
+
+
+|alu|logic_module:MOD_1
+a[0] => and_res.IN0
+a[0] => or_res.IN0
+a[0] => xor_res.IN0
+a[0] => comp_res[0].IN1
+a[1] => and_res.IN0
+a[1] => or_res.IN0
+a[1] => xor_res.IN0
+a[1] => comp_res[1].IN1
+a[2] => and_res.IN0
+a[2] => or_res.IN0
+a[2] => xor_res.IN0
+a[2] => comp_res[2].IN1
+a[3] => and_res.IN0
+a[3] => or_res.IN0
+a[3] => xor_res.IN0
+a[3] => comp_res[3].IN1
+b[0] => and_res.IN1
+b[0] => or_res.IN1
+b[0] => xor_res.IN1
+b[1] => and_res.IN1
+b[1] => or_res.IN1
+b[1] => xor_res.IN1
+b[2] => and_res.IN1
+b[2] => or_res.IN1
+b[2] => xor_res.IN1
+b[3] => and_res.IN1
+b[3] => or_res.IN1
+b[3] => xor_res.IN1
+select[0] => select[0].IN1
+select[1] => select[1].IN1
+result[0] <= mux4:L_MUX.result
+result[1] <= mux4:L_MUX.result
+result[2] <= mux4:L_MUX.result
+result[3] <= mux4:L_MUX.result
+
+
+|alu|logic_module:MOD_1|mux4:L_MUX
+in_00[0] => result.DATAA
+in_00[1] => result.DATAA
+in_00[2] => result.DATAA
+in_00[3] => result.DATAA
+in_01[0] => result.DATAB
+in_01[1] => result.DATAB
+in_01[2] => result.DATAB
+in_01[3] => result.DATAB
+in_10[0] => result.DATAA
+in_10[1] => result.DATAA
+in_10[2] => result.DATAA
+in_10[3] => result.DATAA
+in_11[0] => result.DATAB
+in_11[1] => result.DATAB
+in_11[2] => result.DATAB
+in_11[3] => result.DATAB
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arithmetic_module:MOD_0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+carry_in => carry_in.IN1
+select[0] => select[0].IN1
+select[1] => select[1].IN1
+carry_out <= full_adder:ADDER.c
+result[0] <= full_adder:ADDER.s
+result[1] <= full_adder:ADDER.s
+result[2] <= full_adder:ADDER.s
+result[3] <= full_adder:ADDER.s
+
+
+|alu|arithmetic_module:MOD_0|mux4:B_MUX
+in_00[0] => result.DATAA
+in_00[1] => result.DATAA
+in_00[2] => result.DATAA
+in_00[3] => result.DATAA
+in_01[0] => result.DATAB
+in_01[1] => result.DATAB
+in_01[2] => result.DATAB
+in_01[3] => result.DATAB
+in_10[0] => result.DATAA
+in_10[1] => result.DATAA
+in_10[2] => result.DATAA
+in_10[3] => result.DATAA
+in_11[0] => result.DATAB
+in_11[1] => result.DATAB
+in_11[2] => result.DATAB
+in_11[3] => result.DATAB
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[0] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+select[1] => result.OUTPUTSELECT
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arithmetic_module:MOD_0|full_adder:ADDER
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+i => i1[0].IN1
+s[0] <= half_adder:U2.s
+s[1] <= half_adder:U2.s
+s[2] <= half_adder:U2.s
+s[3] <= half_adder:U2.s
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arithmetic_module:MOD_0|full_adder:ADDER|half_adder:U1
+a => Add0.IN1
+b => Add0.IN2
+s <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+c <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|arithmetic_module:MOD_0|full_adder:ADDER|half_adder:U2
+a => Add0.IN1
+b => Add0.IN2
+s <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+c <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|mux2:MUX_0
+in_0[0] => result.DATAA
+in_0[1] => result.DATAA
+in_0[2] => result.DATAA
+in_0[3] => result.DATAA
+in_1[0] => result.DATAB
+in_1[1] => result.DATAB
+in_1[2] => result.DATAB
+in_1[3] => result.DATAB
+select => result.OUTPUTSELECT
+select => result.OUTPUTSELECT
+select => result.OUTPUTSELECT
+select => result.OUTPUTSELECT
+result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu|flag_circuit:FC_0
+a[0] => ~NO_FANOUT~
+a[1] => ~NO_FANOUT~
+a[2] => ~NO_FANOUT~
+a[3] => v_flag.IN0
+a[3] => v_flag.IN0
+b[0] => ~NO_FANOUT~
+b[1] => ~NO_FANOUT~
+b[2] => ~NO_FANOUT~
+b[3] => v_flag.IN1
+c => c_flag.DATAIN
+s[0] => WideNor0.IN0
+s[1] => WideNor0.IN1
+s[2] => WideNor0.IN2
+s[3] => WideNor0.IN3
+s[3] => v_flag.IN1
+s[3] => n_flag.DATAIN
+n_flag <= s[3].DB_MAX_OUTPUT_PORT_TYPE
+c_flag <= c.DB_MAX_OUTPUT_PORT_TYPE
+v_flag <= v_flag.DB_MAX_OUTPUT_PORT_TYPE
+z_flag <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+
+

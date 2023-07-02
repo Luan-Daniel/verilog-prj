@@ -14,15 +14,25 @@ module full_adder
 	output [N-1:0] s;
 	output c;
 
-	wire [N-1:0] gc;
-	genvar gi;
-	generate
-		for (gi = 0; gi < N; gi = gi + 1) begin : gen_adder
-			half_adder HA(.a(a[gi]), .b(b[gi]), .s(s[gi]), .c(gc[gi]));
-			if (gi == 0) assign gc[0] = i;
-			else assign gc[gi] = HA.c;
-		end
-	endgenerate
-	assign c = gc[N-1];
+	wire [N-1:0] s1, s2, i1;
+	wire c1, c2;
+
+	assign i1 = 0 + i;
+
+	half_adder #(.N(N)) U1(
+		.a(a),
+		.b(b),
+		.s(s1),
+		.c(c1)
+	);
+
+	half_adder #(.N(N)) U2(
+		.a(s1),
+		.b(i1),
+		.s(s),
+		.c(c2)
+	);
+
+	assign c = c1 || c2;
 
 endmodule //full_adder
