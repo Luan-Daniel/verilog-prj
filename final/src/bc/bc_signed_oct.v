@@ -18,5 +18,5 @@ module bc_signed_oct
     .HEX(HEX2)
   );
 
-  assign HEX3 = (B[9])? 8'b0010_0000:0;
+  assign HEX3 = (B[9])? ~8'b0100_0000:~0;
 endmodule

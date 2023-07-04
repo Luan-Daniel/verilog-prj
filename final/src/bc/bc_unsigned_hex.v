@@ -18,5 +18,5 @@ module bc_unsigned_hex
     .HEX(HEX2)
   );
 
-  assign HEX3 = 8'b0011_1111; // 7seg 0
+  assign HEX3 = ~8'b0011_1111; // 7seg 0
 endmodule

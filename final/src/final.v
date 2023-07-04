@@ -24,7 +24,7 @@
 //       (set ALU operation, see final/src/alu/alu.v)
 
 module final
-#(parameter N=10)
+#(parameter N=4)
 (SWITCH, B0, B1, B2, LED, HEX0, HEX1, HEX2, HEX3);
   localparam MSB = N-1;
 
@@ -37,10 +37,10 @@ module final
   reg [MSB:0] A_reg, B_reg;
   reg [9:0] C_reg;
 
-  always @(B0, B1, B2) begin // saves SWITCH state to registers
-    if (B0 & !(B1|B2)) A_reg = SWITCH;
-    else if (B1 & !(B0|B2)) B_reg = SWITCH;
-    else if (B2 & !(B0|B1)) C_reg = SWITCH;
+  always @( B0, B1, B2) begin // saves SWITCH state to registers
+    if (~B0 & !(~B1|~B2)) A_reg = SWITCH;
+    else if (~B1 & !(~B0|~B2)) B_reg = SWITCH;
+    else if (~B2 & !(~B0|~B1)) C_reg = SWITCH;
   end
 
   // - alu -
